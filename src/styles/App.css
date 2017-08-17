@@ -1,0 +1,39 @@
+.app {
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: auto;
+    background-color: white;
+}
+
+.container .show {
+    grid-column: 2 / 4;
+    grid-row:  / 3;
+}
+
+.con.list {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+/*.show {*/
+    /*grid-area: list;*/
+/*}*/
+/*.list {*/
+    /*grid-area: show;*/
+/*}*/
+
+/*.container {*/
+    /*display: grid; */
+    /*grid-template-columns: 50px 50px 50px 50px;*/
+    /*grid-template-rows: auto;*/
+    /*grid-template-areas:*/
+            /*"list show show"*/
+            /*"list show show"*/
+            /*"list show show";*/
+/*}*/

@@ -3,6 +3,54 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+  create_table "auctions", force: :cascade do |t|
+    t.string "lot_title"
+    t.string "lot_description"
+    t.integer "lot_year"
+    t.string "lot_medium"
+    t.string "lot_dimensions"
+    t.time "start_date"
+    t.time "end_date"
+    t.integer "reserve"
+    t.integer "selling_price"
+    t.string "winning_bid"
+    t.bigint "seller_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seller_id"], name: "index_auctions_on_seller_id"
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.integer "bid_price"
+    t.bigint "collector_id"
+    t.bigint "auction_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["auction_id"], name: "index_bids_on_auction_id"
+    t.index ["collector_id"], name: "index_bids_on_collector_id"
+  end
+
+  create_table "collectors", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sellers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "auctions", "sellers"
+  add_foreign_key "bids", "auctions"
+  add_foreign_key "bids", "collectors"
+end
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
