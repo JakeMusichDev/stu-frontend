@@ -1,5 +1,6 @@
 //-----APP
 export const API_URL = 'http://localhost:3000/api/v1/'
+export const APP_URL = 'http://localhost:3001/'
 
 
 export const ADD_AUCTION = 'ADD_AUCTION';
@@ -16,6 +17,8 @@ export const CREATING_USER = "CREATING_USER";
 export const LOGGING_IN = "LOGGING_IN";
 export const LOGGED_IN = 'LOGGED_IN';
 export const LOGGED_OUT = 'LOGGED_OUT';
+export const CURRENT_USER = 'CURRENT_USER';
+
 
 
 

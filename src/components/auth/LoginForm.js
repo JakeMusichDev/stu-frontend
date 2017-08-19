@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import { withRouter, Redirect } from 'react-router'
 import {loginUser} from '../../actions/auth_actions'
 
 class LoginForm extends Component {
@@ -21,36 +22,42 @@ class LoginForm extends Component {
 
 	onSubmit = (event) => {
 		event.preventDefault()
-		console.log(this.state)
 		this.props.loginUser(this.state)
 	}
 
-	render(){
-
+	render() {
 		return(
-			<form onSubmit={(e) => this.onSubmit(e)}>
-				<label>Name</label>
-				<input
-					type="text"
-					name="name"
-					onChange = {(e)=> this.handleChange(e)}
-				/>
-				<label>Email</label>
-				<input
-					type="text"
-					name="email"
-					onChange = {(e) => this.handleChange(e)}
-				/>
-				<label>Password</label>
-				<input
-					type="text"
-					name="password"
-					onChange = {(e)=> this.handleChange(e)}
-				/>
-				<input type="submit" />
-			</form>
+			<div>
+				<form onSubmit={this.onSubmit}>
+					<label>Name</label>
+					<input
+						type="text"
+						name="name"
+						onChange = {this.handleChange}
+					/>
+					<label>Email</label>
+					<input
+						type="text"
+						name="email"
+						onChange = {this.handleChange}
+					/>
+					<label>Password</label>
+					<input
+						type="text"
+						name="password"
+						onChange = {this.handleChange}
+					/>
+					<input type="submit" />
+				</form>
+			</div>
 		)
 	}
 }
 
-export default connect(null, {loginUser: loginUser})(LoginForm)
+// {this.props.loggedIn ? <Redirect to="/stu"/> : null}
+
+const mapStateToProps = (state) => {
+	return {loggedIn: state.authReducer.loggedIn}
+}
+
+export default withRouter(connect(mapStateToProps, {loginUser: loginUser})(LoginForm))

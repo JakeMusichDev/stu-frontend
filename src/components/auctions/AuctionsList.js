@@ -34,7 +34,7 @@ export default class AuctionsList extends Component {
 			},
 			gridList: {
 				width: 300,
-				height: 800,
+				height: 1200,
 				overflowY: 'auto'
 			}
 		};

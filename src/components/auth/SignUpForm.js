@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {createUser} from "../../actions/auth_actions"
+import {withRouter, Redirect} from 'react-router'
 
 class SignUpForm extends Component {
 	constructor() {
@@ -58,5 +59,9 @@ class SignUpForm extends Component {
 	}
 }
 
+const mapStateToProps = (state) => {
+	return {loggedIn: state.authReducer.loggedIn}
+}
 
-export default connect(null, {createUser: createUser})(SignUpForm)
+
+export default withRouter(connect(mapStateToProps, {createUser: createUser})(SignUpForm))

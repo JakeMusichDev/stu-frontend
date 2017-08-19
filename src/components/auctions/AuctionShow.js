@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import portrait from '../../styles/portrait.jpg'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
+import Slider from 'material-ui/Slider'
 
 export default class AuctionShow extends Component {
 
@@ -47,7 +48,6 @@ export default class AuctionShow extends Component {
 
 	render() {
 		const { currentAuction, bids, bidFetchComplete } = this.props;
-
 
 		let content = null
 		if(bidFetchComplete) {
