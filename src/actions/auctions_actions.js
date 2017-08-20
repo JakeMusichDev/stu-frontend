@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import {FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, GET_CURRENT_AUCTION, ADD_AUCTION, FETCH_CURRENT_AUCTION_BIDS} from '../constants/Constants'
+import {FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, GET_CURRENT_AUCTION, ADD_AUCTION, FETCH_CURRENT_AUCTION_BIDS, CURRENT_AUCTION_SELLER} from '../constants/Constants'
 
 //---------ASYNC AUCTIONS ACTIONS----------//
 export function fetchAuctionsData() {
@@ -30,9 +30,10 @@ function auctionsFetchComplete(fetchComplete) {
 }
 
 export function getCurrentAuction(auction) {
-	return {
-		type: GET_CURRENT_AUCTION,
-		currentAuction: auction
+	return dispatch => {
+		return axios.get(`http://localhost:3000/api/v1/sellers/${auction.seller_id}`)
+			.then(response => dispatch({type: CURRENT_AUCTION_SELLER, currentAuctionSeller: response.data}))
+			.then( () => dispatch({type: GET_CURRENT_AUCTION, currentAuction: auction}))
 	}
 }
 

@@ -7,7 +7,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import AuthRoutes from './routes/AuthRoutes'
-import App from './App'
+import App from './components/App'
 
 const store = createStore(
 	rootReducer,

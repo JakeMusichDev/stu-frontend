@@ -40,7 +40,7 @@ export class AuctionsContainer extends Component {
 	}
 
 	render(){
-		const { fetchComplete, auctions, currentAuction, getCurrentAuction, fetchCurrentAuctionBids, bids, bidFetchComplete} = this.props;
+		const { currentAuctionSeller, fetchComplete, auctions, currentAuction, getCurrentAuction, fetchCurrentAuctionBids, bids, bidFetchComplete} = this.props;
 		return(
 			<div className="container">
 				{ fetchComplete &&
@@ -56,6 +56,7 @@ export class AuctionsContainer extends Component {
 						fetchCurrentAuctionBids={fetchCurrentAuctionBids}
 						bids={bids}
 						bidFetchComplete={bidFetchComplete}
+						seller={currentAuctionSeller}
 					/>
 				}
 			</div>
@@ -69,10 +70,12 @@ const mapStateToProps = (state) => {
 		isLoading: state.auctionsReducer.isLoading,
 		fetchComplete: state.auctionsReducer.fetchComplete,
 		currentAuction: state.auctionsReducer.currentAuction,
+		currentAuctionSeller: state.auctionsReducer.currentAuctionSeller,
 		bids: state.bidsReducer.bids,
 		highest_bid: state.bidsReducer.highest_bid,
 		bidsLoading: state.bidsReducer.bidsLoading,
 		bidFetchComplete: state.bidsReducer.bidFetchComplete
+
 	}
 }
 

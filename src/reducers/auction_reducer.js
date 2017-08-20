@@ -1,10 +1,11 @@
-import { FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, ADD_AUCTION, GET_CURRENT_AUCTION } from '../constants/Constants'
+import { FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, ADD_AUCTION, GET_CURRENT_AUCTION, CURRENT_AUCTION_SELLER } from '../constants/Constants'
 
 export default function auctionsReducer(state = {
 	auctions: [],
 	isLoading: false,
 	fetchComplete: false,
-	currentAuction: []
+	currentAuction: [],
+	currentAuctionSeller: null
 }, action) {
 	switch(action.type) {
 
@@ -27,6 +28,11 @@ export default function auctionsReducer(state = {
 			return Object.assign({}, state, {
 				currentAuction: action.currentAuction
 			});
+
+		case CURRENT_AUCTION_SELLER:
+			return Object.assign({}, state, {
+				currentAuctionSeller: action.currentAuctionSeller
+			})
 
 		case ADD_AUCTION:
 			return Object.assign({}, state, {
