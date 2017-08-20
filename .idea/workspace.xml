@@ -1,78 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bf057cf-0e4d-4aaf-b06a-b6e08352b02a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Navbar/Nav.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/lib/Cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/lib/CookiesProvider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/lib/withCookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-cookie/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/ConnectedRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/actions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/es/ConnectedRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/es/actions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/es/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/es/middleware.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/es/reducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/middleware.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/MemoryRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/Prompt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/Redirect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/Route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/Router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/StaticRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/Switch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/MemoryRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/Prompt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/Redirect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/Route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/Router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/StaticRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/Switch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/matchPath.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/es/withRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/matchPath.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/umd/react-router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/umd/react-router.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/node_modules/react-router/withRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/reducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/umd/react-router-redux.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/react-router-redux/umd/react-router-redux.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/universal-cookie/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/universal-cookie/lib/Cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/universal-cookie/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/universal-cookie/lib/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/universal-cookie/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Nav.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/auctions_actions.js" afterPath="$PROJECT_DIR$/src/actions/auctions_actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/bids_actions.js" afterPath="$PROJECT_DIR$/src/actions/bids_actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionShow.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionsList.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionsList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auth/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/auth/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/bids/BiddingDock.js" afterPath="$PROJECT_DIR$/src/components/bids/BiddingDock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/Constants.js" afterPath="$PROJECT_DIR$/src/constants/Constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/auction_reducer.js" afterPath="$PROJECT_DIR$/src/reducers/auction_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/bids_reducer.js" afterPath="$PROJECT_DIR$/src/reducers/bids_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/App.css" afterPath="$PROJECT_DIR$/src/styles/App.css" />
-    </list>
+    <list default="true" id="4bf057cf-0e4d-4aaf-b06a-b6e08352b02a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -463,12 +392,12 @@
       <workItem from="1503069864091" duration="30928000" />
       <workItem from="1503164316433" duration="33000" />
       <workItem from="1503164365537" duration="6982000" />
-      <workItem from="1503182605288" duration="7398000" />
+      <workItem from="1503182605288" duration="7520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194634000" />
+    <option name="totallyTimeSpent" value="194756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
