@@ -4,6 +4,7 @@ export const APP_URL = 'http://localhost:3001/'
 
 
 export const ADD_AUCTION = 'ADD_AUCTION';
+export const CREATING_AUCTION = 'CREATING_AUCTION';
 export const FETCH_AUCTIONS = 'FETCH_AUCTIONS';
 export const FETCH_AUCTIONS_LOADING = 'FETCH_AUCTIONS_LOADING';
 export const FETCH_AUCTION_COMPLETE = 'FETCH_AUCTION_COMPLETE';

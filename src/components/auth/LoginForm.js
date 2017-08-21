@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import { withRouter, Redirect } from 'react-router'
+import { withRouter } from 'react-router'
 import {loginUser} from '../../actions/auth_actions'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import {GridList, GridTile} from 'material-ui/GridList';
 import portrait from '../../styles/portrait.jpg'
-import { Card, Image } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 
 export default class AuctionsList extends Component {

@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import { Grid, Button, Checkbox, Form, Input, Radio, Select, TextArea, Modal } from 'semantic-ui-react'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {addNewAuction} from '../../actions/auctions_actions'
+import {getCurrentUser} from '../../actions/auth_actions'
+import { Grid, Button, Form, Input, TextArea } from 'semantic-ui-react'
 import Datetime from 'react-datetime'
 import moment from 'moment'
 
-export default class AuctionForm extends Component {
-	constructor() {
-		super()
+class AuctionForm extends Component {
+	constructor(props) {
+		super(props)
 
 		this.state = {
 			lot_title: '',
@@ -16,34 +20,46 @@ export default class AuctionForm extends Component {
 			reserve: '',
 			seller_id: '',
 			start_date: '',
-			end_date: '',
-
+			end_date: ''
 		}
 	}
 
+	componentDidMount() {
+		const user = this.props.getCurrentUser()
+		user ? this.setState({seller_id: user.payload}) : null
+	}
+
 	handleChange = (event) => {
+		console.log(this.state)
 		this.setState ({
 			[event.target.name]: event.target.value
 		})
 	}
 
-	onSubmit = (event) => {
-		event.preventDefault()
-		// this.props.createAuction(this.state)
-	}
-
-	handleDate = (event) => {
-		console.log(moment(event)._d)
+	handleStart = (event) => {
+		console.log(moment(event)._d);
 		this.setState({
-			// [event.target.name]: moment(event)._d
+			start_date: moment(event)._d
 		})
 	}
 
+	handleEnd = (event) => {
+		console.log(moment(event)._d);
+		this.setState({
+			end_date: moment(event)._d
+		})
+	}
+
+	onSubmit = (event) => {
+		//----get current user ----//
+		event.preventDefault();
+		this.props.addNewAuction(this.state)
+	}
 
 	handleFile = (e) => {
-		const reader = new FileReader();
-		const file = e.target.files[0];
-		console.log(file)
+		// const reader = new FileReader();
+		// const file = e.target.files[0];
+		// console.log(file)
 		// data_uri: '',
 		// 	filename: '',
 		// 	filetype: ''
@@ -58,7 +74,7 @@ export default class AuctionForm extends Component {
 	 }
 
    render(){
-      return(
+		 return(
       	<Grid
 					textAlign='justified'
 					style={{height: '100%', padding: '10vh'}}
@@ -68,23 +84,16 @@ export default class AuctionForm extends Component {
 						<Form size="large" >
 							<Form.Group>
 								<input type="file" id="file-input" onChange={this.handleFile} />
-								<Form.Field control={Input} label='Item Title' name="lot_title" onChange = {() => this.handleChange}/>
-								<Form.Field control={Input} label='Item Year' name="lot_year" onChange = {() => this.handleChange}/>
+								<Form.Field control={Input} label='Item Title' name="lot_title" onChange = {this.handleChange}/>
+								<Form.Field control={Input} label='Item Year' name="lot_year" onChange = {this.handleChange}/>
 							</Form.Group>
-							<Form.Field control={TextArea} label='Description' name="lot_description" onChange = {() => this.handleChange}/>
-							<Form.Field control={Input} label='Medium' name="lot_dimensions" onChange = {() => this.handleChange}/>
-							<Form.Group>
-								<Datetime onChange={this.handleDate} name="start" closeOnSelect={false}/>
-								<Datetime onChange={this.handleDate} name="end"/>
+							<Form.Field control={TextArea} label='Description' name="lot_description" onChange = {this.handleChange}/>
+							<Form.Field control={Input} label='Medium' name="lot_dimensions" onChange = {this.handleChange}/>
+							<Form.Group className="calendar">
+								<Datetime onChange={this.handleStart.bind(this)} name="start" closeOnSelect={false}/>
+								<Datetime onChange={this.handleEnd.bind(this)} name="end"/>
 							</Form.Group>
-							{/*<Modal*/}
-								{/*className="calendar"*/}
-								{/*trigger={<Button>Pick Time</Button>}*/}
-								{/*header='pick a date'*/}
-								{/*// content={}*/}
-							{/*/>*/}
-
-							<Form.Field control={Button}>Create Auction</Form.Field>
+							<Form.Field onClick={this.onSubmit.bind(this)} control={Button}>Create Auction</Form.Field>
 						</Form>
 					</Grid.Column>
 
@@ -93,4 +102,19 @@ export default class AuctionForm extends Component {
    }
 }
 
-{/*<Datetime className='calendar' onChange={this.handleDate}/>*/}
+const mapDispatchToProps = (dispatch) => {
+	return bindActionCreators({
+		addNewAuction: addNewAuction,
+		getCurrentUser: getCurrentUser
+	}, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(AuctionForm)
+
+//
+// {/*<Modal*/}
+// {/*className="calendar"*/}
+// {/*trigger={<Button>Pick Time</Button>}*/}
+// {/*header='pick a date'*/}
+// {/*// content={}*/}
+// {/*/>*/}

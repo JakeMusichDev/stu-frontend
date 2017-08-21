@@ -17,7 +17,7 @@ class Navbar extends Component {
 	toggleVisibility = () => this.setState({ visible: !this.state.visible })
 
 	render() {
-		const {visible} = this.props
+		// const {visible} = this.props
 		return (
 			<div>
 				<Button onClick={this.toggleVisibility}>Toggle Visibility</Button>

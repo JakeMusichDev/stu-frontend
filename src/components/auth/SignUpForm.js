@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {createUser} from "../../actions/auth_actions"
-import {withRouter, Redirect} from 'react-router'
+import {withRouter} from 'react-router'
 
 class SignUpForm extends Component {
 	constructor() {

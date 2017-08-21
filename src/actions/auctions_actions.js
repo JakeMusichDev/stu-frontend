@@ -1,6 +1,9 @@
 import axios from 'axios'
 
-import {FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, GET_CURRENT_AUCTION, ADD_AUCTION, FETCH_CURRENT_AUCTION_BIDS, CURRENT_AUCTION_SELLER} from '../constants/Constants'
+import {
+	API_URL, FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, GET_CURRENT_AUCTION,
+	FETCH_CURRENT_AUCTION_BIDS, CURRENT_AUCTION_SELLER, CREATING_AUCTION
+} from '../constants/Constants'
 
 //---------ASYNC AUCTIONS ACTIONS----------//
 export function fetchAuctionsData() {
@@ -8,7 +11,7 @@ export function fetchAuctionsData() {
 		dispatch(auctionsFetchLoading(true));
 		return axios.get('http://localhost:3000/api/v1/auctions')
 			.then(auctions => dispatch({ type: FETCH_AUCTIONS, auctions }))
-			.then(function(){
+			.then(() => {
 				dispatch(auctionsFetchComplete(true))
 				dispatch(auctionsFetchLoading(false))
 			})
@@ -50,19 +53,15 @@ function fetchAuctionBids(id) {
 }
 
 // -------ADD AUCTION ACTIONS------------//
-// export function addNewAuction(data) {
-// 	return dispatch => {
-// 		dispatch()
-// 		return fetch('http://localhost:3000/api/v1/auctions', {
-// 			method: 'POST',
-// 			headers: {
-// 				'Accept': 'application/json',
-// 				'Content-Type': 'application/json',
-// 			},
-// 			body: JSON.stringify{
-// 			  data
-// 			}
-// 		}).then(this.fetchAuctionsData())
-// 	}
-// }
+export function addNewAuction(data) {
+	return (dispatch) => {
+		dispatch({type: CREATING_AUCTION, creatingAuction: true})
+		return axios.post(API_URL + '/auctions', data)
+			.then(response => console.log(response))
+			.then(function(){
+				dispatch({type: CREATING_AUCTION, creatingAuction: false})
+			})
+
+	}
+}
 

@@ -6,32 +6,33 @@ import {FETCH_CURRENT_AUCTION_BIDS, FETCH_CURRENT_AUCTION_BIDS_LOADING, FETCH_CU
 //---------ASYNC BIDS ACTIONS----------//
 export function fetchCurrentAuctionBids(id) {
 	return dispatch => {
-		// dispatch(fetchLoading(true));
+		dispatch(fetchLoading(true));
 		return axios.get(`http://localhost:3000/api/v1/auctions/${id}/bids`)
 			.then(bids => dispatch({ type: FETCH_CURRENT_AUCTION_BIDS, bids }))
-			.then(function(){
+			.then(() => {
 				dispatch(fetchComplete(true))
 				dispatch(fetchLoading(false))
 			})
 	}
 }
 
-export function placeBid(bid_price, auction_id) {
+export function placeBid(price, auctionId) {
 	return dispatch => {
-		// dispatch({type: PLACE_BID})
+		dispatch({type: PLACE_BID, placingBid: true})
 		const headerToken = axios.defaults.headers.common['Authorization']
 		const userId = jwt_decode(headerToken).id
+		debugger
 		return axios.post(`http://localhost:3000/api/v1/bids`, {
 				headers: {
 					Authorization: headerToken
 				},
 				bid: {
 					collector_id: userId,
-					auction_id: 1,
-					bid_price: 10000,
+					auction_id: parseInt(auctionId),
+					bid_price: parseInt(price)
 				}
 		})
-			.then(fetchCurrentAuctionBids(userId))
+			.then(response => console.log(response.data))
 	}
 }
 

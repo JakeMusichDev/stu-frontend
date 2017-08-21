@@ -7,6 +7,7 @@ export default function bidsReducer(state = {
 	highest_bid: null,
 	bidsLoading: false,
 	bidFetchComplete: false,
+	placingBid: false
 }, action) {
 	switch(action.type) {
 
@@ -27,7 +28,7 @@ export default function bidsReducer(state = {
 
 		case PLACE_BID:
 			return Object.assign({}, state, {
-				auctions: state.auctions.concat(action.auction)
+				placingBid: action.placingBid
 			});
 
 		default:

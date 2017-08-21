@@ -20,10 +20,12 @@
     background-color: aquamarine;
     grid-column: 1;
     grid-row: 1;
+    margin: 35px;
+    padding: 50px;
 }
 
 .container .show-auction-detail {
-    background-color: darkcyan;
+    background-color: aliceblue;
 }
 
 .container .show-auction-artist-detail {

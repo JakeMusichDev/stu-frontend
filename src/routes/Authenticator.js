@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-// import {connect} from 'react-redux'
-// import bindActionCreators from 'redux'
-import {setAuthToken, getCurrentUser} from "../actions/auth_actions"
+import {setAuthToken} from "../actions/auth_actions"
 
 export default function(ProtectedComponent) {
 	class Authenticator extends Component {

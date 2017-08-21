@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import {placeBid} from "../../actions/bids_actions"
 import tree from '../../styles/tree.jpg'
-import BiddingDock from '../auctions/AuctionShow'
-import Divider from 'material-ui/Divider'
-
-import Slider from 'material-ui/Slider'
+import moment from 'moment'
 
 class AuctionShow extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			bid_price: ''
+		}
+	}
+
 	componentWillUpdate(nextProps, nextState) {
 		if(this.props.currentAuction !== nextProps.currentAuction) {
 			this.props = nextProps
@@ -22,18 +28,28 @@ class AuctionShow extends Component {
 				highest = array[i]
 			}
 		}
-		debugger
 		return highest.bid_price
 	}
 
 	currentTimeLeft = (start, end) => {
-		const startTime = new Date(start)
-		const endTime = new Date(end)
-		const diff = endTime - startTime
-		return this.props.convertTime(diff)
+		const startDate = moment(start)
+		const endDate = moment(end)
+		return startDate.diff(endDate, 'minutes')
 	}
 
-// <RaisedButton label="Bid" onClick={this.props.placeBid()}/>
+	handleBid = (event) => {
+		console.log(this.state)
+		this.setState({
+			bid_price: event.target.value
+		})
+	}
+
+	handleSubmit = event => {
+		event.preventDefault()
+		this.props.placeBid(this.state.bid_price, event.target.value)
+	}
+
+
 	createContent = (auction, bids) => {
 		return (
 			<div className="show-container-body">
@@ -41,7 +57,7 @@ class AuctionShow extends Component {
 					<img src={tree} style={{width: '200px',}}/>
 				</div>
 				<div className="show-auction-detail">
-					<h3>{}, {auction.lot_year}</h3>
+					<h3>{auction.lot_title}, {auction.lot_year}</h3>
 					<p>{auction.lot_medium} {auction.lot_dimensions}</p>
 				</div>
 				<div className="show-auction-artist-detail">
@@ -50,13 +66,17 @@ class AuctionShow extends Component {
 				</div>
 				<div>
 					<p>Time Left:
-						{this.currentTimeLeft(auction.start_date, auction.end_date)}
+						{this.currentTimeLeft(auction.start_date, auction.end_date)} minutes left
 					</p>
 					<p>Current Highest Bid: ${this.getHighestBid(bids.data)}</p>
+					<input type="price" onChange={this.handleBid}/>
+					<button onClick={this.handleSubmit} value={auction.id} >bid</button>
 				</div>
 			</div>
 		)
 	}
+
+// <RaisedButton label="Bid" onClick={this.props.placeBid()}/>
 
 	render() {
 		const { currentAuction, bids, bidFetchComplete } = this.props;
@@ -65,7 +85,7 @@ class AuctionShow extends Component {
 			content = this.createContent(currentAuction, bids)
 		} else {
 			//-------ADD A BETTER COMPONENT----OR EXPAND-----//
-			content = <h1></h1>
+			content = <h1>Auction Show</h1>
 		}
 
  		return(
@@ -76,6 +96,10 @@ class AuctionShow extends Component {
    }
 }
 
-export default connect(null, {placeBid:placeBid})(AuctionShow)
+const mapDispatchToProps = dispatch => {
+	return bindActionCreators({placeBid}, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(AuctionShow)
 
 
