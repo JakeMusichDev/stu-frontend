@@ -21,17 +21,12 @@ export function placeBid(price, auctionId) {
 		dispatch({type: PLACE_BID, placingBid: true})
 		const headerToken = axios.defaults.headers.common['Authorization']
 		const userId = jwt_decode(headerToken).id
-		debugger
-		return axios.post(`http://localhost:3000/api/v1/bids`, {
-				headers: {
-					Authorization: headerToken
-				},
-				bid: {
-					collector_id: userId,
+		return axios.post(`http://localhost:3000/api/v1/bids`,
+				{
+					user_id: userId,
 					auction_id: parseInt(auctionId),
 					bid_price: parseInt(price)
-				}
-		})
+				})
 			.then(response => console.log(response.data))
 	}
 }

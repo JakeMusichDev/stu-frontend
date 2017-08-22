@@ -34,7 +34,7 @@ function auctionsFetchComplete(fetchComplete) {
 
 export function getCurrentAuction(auction) {
 	return dispatch => {
-		return axios.get(`http://localhost:3000/api/v1/sellers/${auction.seller_id}`)
+		return axios.get(`http://localhost:3000/api/v1/users/${auction.user_id}`)
 			.then(response => dispatch({type: CURRENT_AUCTION_SELLER, currentAuctionSeller: response.data}))
 			.then( () => dispatch({type: GET_CURRENT_AUCTION, currentAuction: auction}))
 	}
@@ -57,6 +57,7 @@ export function addNewAuction(data) {
 	return (dispatch) => {
 		dispatch({type: CREATING_AUCTION, creatingAuction: true})
 		return axios.post(API_URL + '/auctions', data)
+			.catch(error => console.log(error))
 			.then(response => console.log(response))
 			.then(function(){
 				dispatch({type: CREATING_AUCTION, creatingAuction: false})

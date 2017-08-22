@@ -3,20 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf057cf-0e4d-4aaf-b06a-b6e08352b02a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/auctions_actions.js" afterPath="$PROJECT_DIR$/src/actions/auctions_actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/bids_actions.js" afterPath="$PROJECT_DIR$/src/actions/bids_actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Navbar/Nav.js" afterPath="$PROJECT_DIR$/src/components/Navbar/Nav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionShow.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auctions/AuctionsList.js" afterPath="$PROJECT_DIR$/src/components/auctions/AuctionsList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auth/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/auth/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auth/SignUpForm.js" afterPath="$PROJECT_DIR$/src/components/auth/SignUpForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/Constants.js" afterPath="$PROJECT_DIR$/src/constants/Constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/auction_reducer.js" afterPath="$PROJECT_DIR$/src/reducers/auction_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/bids_reducer.js" afterPath="$PROJECT_DIR$/src/reducers/bids_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Authenticator.js" afterPath="$PROJECT_DIR$/src/routes/Authenticator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/App.css" afterPath="$PROJECT_DIR$/src/styles/App.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,22 +28,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="auth_reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/auth_reducer.js">
+      <file leaf-file-name="auctions_actions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/auctions_actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth_actions.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/actions/auth_actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="471">
+              <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +43,7 @@
       <file leaf-file-name="AuctionShow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionShow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="638">
               <caret line="94" column="7" lean-forward="false" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -71,58 +52,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/auctions/ShowComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BiddingDock.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/bids/BiddingDock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-215">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bids_actions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bids_actions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/bids_actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
-              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state relative-caret-position="391">
+              <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuctionsContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -185,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/routes/AuthRoutes.js" />
         <option value="$PROJECT_DIR$/src/reducers/auth_reducer.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/actions/auth_actions.js" />
         <option value="$PROJECT_DIR$/src/components/bids/BiddingDock.js" />
         <option value="$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -202,11 +138,12 @@
         <option value="$PROJECT_DIR$/src/routes/Authenticator.js" />
         <option value="$PROJECT_DIR$/src/components/Navbar/Nav.js" />
         <option value="$PROJECT_DIR$/src/reducers/auction_reducer.js" />
-        <option value="$PROJECT_DIR$/src/actions/auctions_actions.js" />
-        <option value="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" />
         <option value="$PROJECT_DIR$/src/styles/App.css" />
         <option value="$PROJECT_DIR$/src/reducers/bids_reducer.js" />
         <option value="$PROJECT_DIR$/src/components/auctions/AuctionShow.js" />
+        <option value="$PROJECT_DIR$/src/actions/auth_actions.js" />
+        <option value="$PROJECT_DIR$/src/components/auctions/AuctionForm.js" />
+        <option value="$PROJECT_DIR$/src/actions/auctions_actions.js" />
         <option value="$PROJECT_DIR$/src/actions/bids_actions.js" />
       </list>
     </option>
@@ -394,7 +331,7 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JavaScript" />
-    <property name="SearchEverywhereHistoryKey" value="createHistory&#9;FILE&#9;file:///Users/MakeJusich/development/stu/stu-frontend/node_modules/react-router/es/createMemoryHistory.js&#10;createBrows&#9;null&#9;null&#10;createBro&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="getcurre&#9;null&#9;null&#10;createHistory&#9;FILE&#9;file:///Users/MakeJusich/development/stu/stu-frontend/node_modules/react-router/es/createMemoryHistory.js&#10;createBrows&#9;null&#9;null&#10;createBro&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -453,12 +390,12 @@
       <workItem from="1503164316433" duration="33000" />
       <workItem from="1503164365537" duration="6982000" />
       <workItem from="1503182605288" duration="7520000" />
-      <workItem from="1503321402291" duration="11314000" />
+      <workItem from="1503321402291" duration="13763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214336000" />
+    <option name="totallyTimeSpent" value="216785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,6 +545,72 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="504">
             <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+            <folding>
+              <marker date="1502681792000" expanded="true" signature="13755:13783" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="15095:15425" ph="{&quot;version&quot;: &quot;0.2.0&quot;...}" />
+              <marker date="1502681792000" expanded="true" signature="15139:15423" ph="[...]" />
+              <marker date="1502681792000" expanded="true" signature="15140:15422" ph="{&quot;name&quot;: &quot;Chrome&quot;...}" />
+              <marker date="1502681792000" expanded="true" signature="15370:15418" ph="{&quot;webpack:///src/*&quot;: &quot;${webRoot}/*&quot;...}" />
+              <marker date="1502681792000" expanded="true" signature="19535:19566" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="19548:19564" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="19672:19737" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="19816:19871" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="19829:19869" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21733:22030" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21757:21907" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21812:21844" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21866:21901" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21921:22028" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="21942:22017" ph="&lt;div/&gt;" />
+              <marker date="1502681792000" expanded="true" signature="22963:22983" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="23019:23076" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="23158:23263" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="23171:23261" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="24342:24408" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="24441:24728" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="30210:30260" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="30367:30454" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="30664:30704" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="33536:33801" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="33540:33734" ph="//..." />
+              <marker date="1502681792000" expanded="true" signature="36236:36320" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="36321:36425" ph="//..." />
+              <marker date="1502681792000" expanded="true" signature="41592:41739" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="41679:41732" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="42189:42215" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51095:51208" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51117:51197" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51131:51193" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51562:52153" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51584:52142" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51644:51708" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51768:51894" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51837:51875" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="51970:52017" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="52092:52138" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="53084:53496" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="53106:53485" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="53123:53481" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="53210:53445" ph="//..." />
+              <marker date="1502681792000" expanded="true" signature="54604:54733" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="54613:54733" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="56368:56464" ph="&lt;html/&gt;" />
+              <marker date="1502681792000" expanded="true" signature="56387:56464" ph="&lt;head/&gt;" />
+              <marker date="1502681792000" expanded="true" signature="56398:56464" ph="&lt;script/&gt;" />
+              <marker date="1502681792000" expanded="true" signature="60344:60411" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="61275:61353" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="61392:61473" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="62413:62491" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="62530:62553" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="63464:63542" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="63580:63770" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="65225:65275" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="65748:65814" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="68667:68785" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="83026:83090" ph="{...}" />
+              <marker date="1502681792000" expanded="true" signature="104952:105000" ph="..." />
+              <marker date="1502681792000" expanded="true" signature="105142:105217" ph="..." />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -664,16 +667,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/profile/ProfileContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -700,6 +693,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -789,20 +785,8 @@
     <entry file="file://$PROJECT_DIR$/src/styles/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
-          <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#801#898#0" expanded="false" />
-            <element signature="e#1283#1646#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,29 +801,9 @@
     <entry file="file://$PROJECT_DIR$/src/components/bids/BiddingDock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-215">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/auctions_actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-538">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -849,8 +813,48 @@
         <state relative-caret-position="540">
           <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
-            <element signature="e#0#152#0" expanded="true" />
+            <element signature="e#0#152#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="73" lean-forward="true" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#801#898#0" expanded="false" />
+            <element signature="e#1283#1646#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/auth_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -862,9 +866,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/auth_actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/auctions_actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/auctions/AuctionShow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="638">
           <caret line="94" column="7" lean-forward="false" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -874,27 +896,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/bids_actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="391">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/auth_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/auth_actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

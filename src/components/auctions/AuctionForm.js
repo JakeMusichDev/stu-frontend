@@ -14,11 +14,11 @@ class AuctionForm extends Component {
 		this.state = {
 			lot_title: '',
 			lot_description: '',
-			lot_year: '',
+			lot_year: null,
 			lot_medium: '',
 			lot_dimensions: '',
-			reserve: '',
-			seller_id: '',
+			reserve: null,
+			user_id: '',
 			start_date: '',
 			end_date: ''
 		}
@@ -26,7 +26,7 @@ class AuctionForm extends Component {
 
 	componentDidMount() {
 		const user = this.props.getCurrentUser()
-		user ? this.setState({seller_id: user.payload}) : null
+		user ? this.setState({user_id: user.payload}) : null
 	}
 
 	handleChange = (event) => {
