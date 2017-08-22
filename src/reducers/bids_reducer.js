@@ -1,5 +1,5 @@
 import {
-	FETCH_CURRENT_AUCTION_BIDS, FETCH_CURRENT_AUCTION_BIDS_LOADING, FETCH_CURRENT_AUCTION_BIDS_COMPLETE
+	FETCH_CURRENT_AUCTION_BIDS, FETCH_CURRENT_AUCTION_BIDS_LOADING, FETCH_CURRENT_AUCTION_BIDS_COMPLETE, PLACE_BID
 } from '../constants/Constants'
 
 export default function bidsReducer(state = {
@@ -7,6 +7,7 @@ export default function bidsReducer(state = {
 	highest_bid: null,
 	bidsLoading: false,
 	bidFetchComplete: false,
+	placingBid: false
 }, action) {
 	switch(action.type) {
 
@@ -25,10 +26,10 @@ export default function bidsReducer(state = {
 				bidFetchComplete: action.bidFetchComplete
 			})
 
-		// case ADD_Bid:
-		// 	return Object.assign({}, state, {
-		// 		auctions: state.auctions.concat(action.auction)
-		// 	});
+		case PLACE_BID:
+			return Object.assign({}, state, {
+				placingBid: action.placingBid
+			});
 
 		default:
 			return state
