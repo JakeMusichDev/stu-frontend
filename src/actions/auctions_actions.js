@@ -1,8 +1,13 @@
 import axios from 'axios'
 
 import {
-	API_URL, FETCH_AUCTIONS, FETCH_AUCTIONS_LOADING, FETCH_AUCTION_COMPLETE, GET_CURRENT_AUCTION,
-	FETCH_CURRENT_AUCTION_BIDS, CURRENT_AUCTION_SELLER, CREATING_AUCTION
+	API_URL, FETCH_AUCTIONS,
+	FETCH_AUCTIONS_LOADING,
+	FETCH_AUCTION_COMPLETE,
+	GET_CURRENT_AUCTION,
+	FETCH_CURRENT_AUCTION_BIDS,
+	CURRENT_AUCTION_SELLER,
+	CREATING_AUCTION
 } from '../constants/Constants'
 
 //---------ASYNC AUCTIONS ACTIONS----------//
@@ -47,7 +52,6 @@ function fetchAuctionBids(id) {
 			.then(response => response.json() )
 			.then(bids => dispatch({ type: FETCH_CURRENT_AUCTION_BIDS, bids }))
 			.then(function() {
-				dispatch()
 			})
 	}
 }
@@ -65,4 +69,3 @@ export function addNewAuction(data) {
 
 	}
 }
-

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import portrait from '../../styles/portrait.jpg'
-import { Card } from 'semantic-ui-react'
+import { Card, Container } from 'semantic-ui-react'
 
 
 export default class AuctionsList extends Component {
@@ -8,7 +8,7 @@ export default class AuctionsList extends Component {
 	createList = () => {
 		return this.props.auctions.map(auction => {
 				return (
-					<div key={auction.id} onClick={() => this.props.getCurrentAuction(auction)}>
+					<div key={auction.id} onClick={() => this.props.getCurrentAuction(auction)} className="list-item">
 						<Card
 							image={portrait}
 							header={auction.lot_title}
@@ -25,9 +25,9 @@ export default class AuctionsList extends Component {
 	render() {
 		const {fetchStatus} = this.props
 		return (
-			<Card.Group className="list">
+			<div className="list">
 				{fetchStatus ? this.createList() : <p>loading...</p>}
-			</Card.Group>
+			</div>
 		)
 	}
 }

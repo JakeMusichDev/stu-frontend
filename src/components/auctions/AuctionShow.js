@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {placeBid} from "../../actions/bids_actions"
+import Timer from '../timer/timer'
 import tree from '../../styles/tree.jpg'
 import moment from 'moment'
 
@@ -31,14 +32,8 @@ class AuctionShow extends Component {
 		return highest.bid_price
 	}
 
-	currentTimeLeft = (start, end) => {
-		const startDate = moment(start)
-		const endDate = moment(end)
-		return startDate.diff(endDate, 'minutes')
-	}
 
 	handleBid = (event) => {
-		console.log(this.state)
 		this.setState({
 			bid_price: event.target.value
 		})
@@ -47,8 +42,8 @@ class AuctionShow extends Component {
 	handleSubmit = event => {
 		event.preventDefault()
 		this.props.placeBid(this.state.bid_price, event.target.value)
+		this.setState({bid_price: ''})
 	}
-
 
 	createContent = (auction, bids) => {
 		return (
@@ -64,13 +59,17 @@ class AuctionShow extends Component {
 					<p>Artist: {this.props.seller.name }</p>
 					<p>Contact: {this.props.seller.email }</p>
 				</div>
-				<div>
-					<p>Time Left:
-						{this.currentTimeLeft(auction.start_date, auction.end_date)} minutes left
-					</p>
-					<p>Current Highest Bid: ${this.getHighestBid(bids.data)}</p>
-					<input type="price" onChange={this.handleBid}/>
-					<button onClick={this.handleSubmit} value={auction.id} >bid</button>
+				<div className="timer">
+					{/*<Timer*/}
+						{/*start={auction.start_date}*/}
+						{/*end={auction.end_date}*/}
+						{/*id={auction.id}*/}
+					{/*/>*/}
+					<div className="bidding-dock">
+						<p>Current Highest Bid: ${this.getHighestBid(bids.data)}</p>
+						<input type="price" onChange={this.handleBid}/>
+						<button onClick={this.handleSubmit} value={auction.id} >bid</button>
+					</div>
 				</div>
 			</div>
 		)
@@ -84,8 +83,7 @@ class AuctionShow extends Component {
 		if(bidFetchComplete && bids) {
 			content = this.createContent(currentAuction, bids)
 		} else {
-			//-------ADD A BETTER COMPONENT----OR EXPAND-----//
-			content = <h1>Auction Show</h1>
+			content = null
 		}
 
  		return(

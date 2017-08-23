@@ -12,44 +12,27 @@ import AuctionShow from './AuctionShow'
 export class AuctionsContainer extends Component {
 	componentDidMount() {
 		this.props.getCurrentUser()
-		if (this.props.auctions.length === 0 ) {
+		if (this.props.auctions.length === 0) {
 			this.props.fetchAuctionsData()
 		}
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if(this.props !== nextProps) {
+		if (this.props !== nextProps) {
 			this.props = nextProps
 		}
 	}
 
-	timeConversion = (millisec) => {
-		var seconds = (millisec / 1000).toFixed(1);
-		var minutes = (millisec / (1000 * 60)).toFixed(1);
-		var hours = (millisec / (1000 * 60 * 60)).toFixed(1);
-		var days = (millisec / (1000 * 60 * 60 * 24)).toFixed(1);
-		if (seconds < 60) {
-			return seconds + " Sec";
-		} else if (minutes < 60) {
-			return minutes + " Min";
-		} else if (hours < 24) {
-			return hours + " Hrs";
-		} else {
-			return days + " Days"
-		}
-	}
-
-	render(){
-		const { currentAuctionSeller, fetchComplete, auctions, currentAuction, getCurrentAuction, fetchCurrentAuctionBids, bids, bidFetchComplete} = this.props;
-		return(
-			<div className="container">
-				{ fetchComplete &&
-				<AuctionsList
-					auctions={auctions}
-					fetchStatus={fetchComplete}
-					getCurrentAuction={getCurrentAuction}
-				/>}
-				{ currentAuction &&
+	render() {
+		const {currentAuctionSeller, fetchComplete, auctions, currentAuction, getCurrentAuction, fetchCurrentAuctionBids, bids, bidFetchComplete} = this.props;
+		if (fetchComplete && currentAuction) {
+			return (
+				<div className="container">
+					<AuctionsList
+						auctions={auctions}
+						fetchStatus={fetchComplete}
+						getCurrentAuction={getCurrentAuction}
+					/>
 					<AuctionShow
 						currentAuction={currentAuction}
 						convertTime={this.timeConversion}
@@ -58,9 +41,11 @@ export class AuctionsContainer extends Component {
 						bidFetchComplete={bidFetchComplete}
 						seller={currentAuctionSeller}
 					/>
-				}
-			</div>
-		)
+				</div>
+			)
+		} else {
+			return <p>loading...</p>
+		}
 	}
 }
 
@@ -90,20 +75,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuctionsContainer)
 
-
-// if(fetchComplete && currentAuction ) {
-// 	return(
-// 		<AuctionsList
-// 			auctions={auctions}
-// 			fetchStatus={fetchComplete}
-// 			getCurrentAuction={getCurrentAuction}
-// 		/>
-// 		<AuctionShow
-// 		currentAuction={currentAuction}
-// 		convertTime={this.timeConversion}
-// 		fetchCurrentAuctionBids={fetchCurrentAuctionBids}
-// 		bids={bids}
-// 		bidFetchComplete={bidFetchComplete}
-// 		/>
-// 	)
-// }

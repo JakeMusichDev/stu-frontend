@@ -51,7 +51,6 @@ class AuctionForm extends Component {
 	}
 
 	onSubmit = (event) => {
-		//----get current user ----//
 		event.preventDefault();
 		this.props.addNewAuction(this.state)
 	}

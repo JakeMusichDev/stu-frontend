@@ -23,6 +23,8 @@ export const LOGGED_IN = 'LOGGED_IN';
 export const LOGGED_OUT = 'LOGGED_OUT';
 export const CURRENT_USER = 'CURRENT_USER';
 
+//---------TIMER CONSTANTS
 
-
-
+export const START_TIMER = 'START_TIMER';
+export const STOP_TIMER = 'STOP_TIMER';
+export const TIMER_TICK = 'TIMER_TICK';

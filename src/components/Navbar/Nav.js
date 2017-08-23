@@ -19,10 +19,9 @@ class Navbar extends Component {
 	render() {
 		// const {visible} = this.props
 		return (
-			<div>
-				<Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
+			<div className="navbar">
 				<Sidebar.Pushable as={Segment}>
-					<Sidebar as={Menu} animation='overlay' direction='top' visible={this.state.visible} inverted>
+					<Sidebar as={Menu} animation='push' direction='left' visible={this.state.visible} inverted>
 						<Menu.Item name='home'>
 							<Icon name='home' />
 							<NavLink to="/stu/auctions/new">
@@ -43,8 +42,7 @@ class Navbar extends Component {
 					</Sidebar>
 					<Sidebar.Pusher>
 						<Segment basic>
-							<Header as='h3'>Application Content</Header>
-							<Image src='/assets/images/wireframe/paragraph.png' />
+							<Header as='h1' onClick={this.toggleVisibility}>STU</Header>
 						</Segment>
 					</Sidebar.Pusher>
 				</Sidebar.Pushable>

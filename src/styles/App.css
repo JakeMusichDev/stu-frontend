@@ -1,25 +1,64 @@
-.app {
-
-}
-
 .container {
-    /*display: grid;*/
-    /*grid-template-columns: repeat(3, 1fr);*/
-    /*grid-gap: 10px;*/
-    /*grid-auto-rows: minmax(100px, auto);*/
-    /*margin: auto;*/
-    background-color: pink;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1200px;
+    margin: 5em;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 250px 250px 500px 500px;
+    grid-template-rows: 600px 600px;
 }
 
-.container .show {
-    grid-column: 2 / 4;
-    grid-row:  / 3;
+.navbar {
+    position: relative;
+}
+
+.container .list {
+    /*position: relative;*/
+    /*margin-left: 25vh;*/
+    /*margin-top: 15vh;*/
+    /*background-color: deeppink;*/
+    grid-column: 3/6;
+    grid-row: 1/3;
+    z-index: 1;
+    width: 100em;
+    /*height: 100vh;*/
+    overflow: auto;
+}
+
+.container .list .list-item {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+
+}
+.container .list .list-item:hover {
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+.calendar {
+    padding: 100px;
+}
+
+.container .show-container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 2;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    transform: translateY(40%);
 }
 
 .container .show-container-body {
     background-color: aquamarine;
-    grid-column: 1;
-    grid-row: 1;
     margin: 35px;
     padding: 50px;
 }
@@ -33,18 +72,9 @@
 }
 
 .container .show-auction-image {
-    margin: 50px;
-    padding: 50px;
+    /*margin: 50px;*/
+    /*padding: 50px;*/
 
-}
-
-.container .list {
-    padding: 20px;
-    padding-top: 50vh;
-}
-
-.calendar {
-    padding: 100px;
 }
 
 #file-input {
